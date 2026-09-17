@@ -8,6 +8,10 @@ content:
     path: src/content/irasai
     view:
       fields: [ title, published ]
+      sort: [ published, title ]
+      default:
+        sort: published
+        order: desc
     filename: '{primary}.mdx'
     fields:
       - name: title
