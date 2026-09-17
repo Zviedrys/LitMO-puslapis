@@ -40,10 +40,17 @@ content:
         label: New image thing
         type: image
 actions:
+  - name: test-deploy
+    label: Test site deployment
+    workflow: .
+    confirm:
+      title: Test?
+      message: This will trigger the build workflow.
+      button: Test
   - name: deploy-site
     label: Deploy site
-    workflow: pages-cms-action.yml
+    workflow: .
     confirm:
-      title: Deploy site?
+      title: Deploy?
       message: This will trigger the deployment workflow.
       button: Deploy
