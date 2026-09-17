@@ -39,3 +39,11 @@ content:
       - name: imagee
         label: New image thing
         type: image
+actions:
+  - name: deploy-site
+    label: Deploy site
+    workflow: pages-cms-action.yml
+    confirm:
+      title: Deploy site?
+      message: This will trigger the deployment workflow.
+      button: Deploy
