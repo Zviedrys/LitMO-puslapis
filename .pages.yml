@@ -32,3 +32,6 @@ content:
         type: rich-text
         options:
           format: markdown
+      - name: imagee
+        label: New image thing
+        type: image
