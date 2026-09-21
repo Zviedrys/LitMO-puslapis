@@ -23,8 +23,7 @@ actions:
   - name: test-deploy
     label: Test site deployment
     workflow: .
-    confirm:
-      { title: "Test?", message: "This will trigger the build workflow.", button: "Test"}
+    confirm: { title: "Test?", message: "This will trigger the build workflow.", button: "Test"}
   - name: deploy-site
     label: Deploy site
     workflow: .
