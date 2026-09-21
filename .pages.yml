@@ -9,40 +9,22 @@ content:
     view:
       fields: [ title, published ]
       sort: [ published, title ]
-      default:
-        sort: published
-        order: desc
+      default: { sort: published, order: desc }
     filename: '{primary}.mdx'
     fields:
-      - name: title
-        label: Antraštė
-        type: string
-        required: true
-      - name: published
-        label: Paskelbimo data
-        type: date
-        required: true
-      - name: description
-        label: "Trumpas aprašymas (optional, tekstas po antrašte)"
-        type: string
-      - name: image
-        label: "Paveiksliukas (optional, LitMO logo by default)"
-        type: string
-      - name: updated
-        label: Redagavimo data (optional)
-        type: date
+      - { name: title, label: Antraštė, type: string, required: true }
+      - { name: published, label: Paskelbimo data, type: date, required: true }
+      - { name: description, label: "Trumpas aprašymas (optional, tekstas po antrašte)", type: string }
+      - { name: image, label: "Paveiksliukas (optional, LitMO logo by default)", type: string }
+      - { name: updated, label: Redagavimo data (optional), type: date }
       - { name: body, label: Įrašo tekstas, type: rich-text, options: { format: markdown } }
-      - name: imagee
-        label: New image thing
-        type: image
+      - { name: imagee, label: New image thing, type: image}
 actions:
   - name: test-deploy
     label: Test site deployment
     workflow: .
     confirm:
-      title: Test?
-      message: This will trigger the build workflow.
-      button: Test
+      { title: "Test?", message: "This will trigger the build workflow.", button: "Test"}
   - name: deploy-site
     label: Deploy site
     workflow: .
