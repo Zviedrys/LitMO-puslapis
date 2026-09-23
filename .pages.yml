@@ -43,7 +43,7 @@ content:
   - name: items2
     label: Items2
     type: collection
-    path: src/data/items
+    path: src/data/items/
     format: yaml
 
     fields:
