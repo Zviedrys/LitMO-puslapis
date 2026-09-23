@@ -1,0 +1,8 @@
+- name: animals
+  label: Animals
+
+- name: plants
+  label: Plants
+
+- name: places
+  label: Places
