@@ -5,9 +5,10 @@ media:
 content:
   - name: categories
     label: Categories
-    type: collection
+    type: file
     path: src/data/categories
     format: yaml
+    list: true
 
     fields:
       - name: name
