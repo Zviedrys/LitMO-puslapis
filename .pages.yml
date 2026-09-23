@@ -48,55 +48,10 @@ content:
 
       - name: category
         label: Category
-        type: select
+        type: reference
         required: true
         options:
-          values:
-            - name: animals
-              label: Animals
-            - name: plants
-              label: Plants
-            - name: places
-              label: Places
-  - name: items2
-    label: Items2
-    type: collection
-    path: src/data/items2
-    format: yaml
-    filename: "{primary}.yml"
-
-    fields:
-      - name: url
-        label: URL
-        type: string
-        required: true
-
-      - name: image
-        label: Image
-        type: string
-        required: true
-
-      - name: text
-        label: Alt text
-        type: text
-        required: true
-
-      - name: category
-        label: Category
-        type: select
-        required: true
-        options:
-          values:
-            - name: animals
-              label: Animals
-            - name: plants
-              label: Plants
-            - name: places
-              label: Places
-
-    view:
-      primary: text
-      fields:
-        - text
-        - category
-        - image
+          collection: categories
+          search: "name,label"
+          value: "{name}"
+          label: "{label}"
