@@ -54,10 +54,8 @@ content:
 
       - name: image
         label: Image
-        type: image
+        type: string
         required: true
-        options:
-          media: images
 
       - name: text
         label: Alt text
