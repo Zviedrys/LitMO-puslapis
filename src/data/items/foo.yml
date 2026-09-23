@@ -1,0 +1,4 @@
+url: "https://example.com/foo"
+image: "/images/foo.jpg"
+text: "A description of Foo"
+category: "animals"
