@@ -6,7 +6,7 @@ content:
   - name: categories
     label: Categories
     type: file
-    path: src/data/categories
+    path: src/data/categories.yml
     format: yaml
     list: true
 
