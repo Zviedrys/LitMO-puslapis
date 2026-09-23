@@ -1,30 +1,42 @@
 media:
   input: src/assets/images
   output: /
+
 content:
-  - name: irasai
-    label: "Įrašai"
-    type: collection
-    path: src/content/irasai
-    view:
-      fields: [ title, published ]
-      sort: [ published, title ]
-      default: { sort: published, order: desc }
-    filename: '{primary}.mdx'
+  - name: items
+    label: Items
+    type: file
+    path: src/data/items.yml
+    format: yaml
+    list: true
+
     fields:
-      - { name: title, label: "Antraštė", type: string, required: true }
-      - { name: published, label: "Paskelbimo data", type: date, required: true }
-      - { name: description, label: "Trumpas aprašymas (optional, tekstas po antrašte)", type: string }
-      - { name: image, label: "Paveiksliukas (optional, LitMO logo by default)", type: string }
-      - { name: updated, label: "Redagavimo data (optional)", type: date }
-      - { name: body, label: "Įrašo tekstas", type: rich-text, options: { format: markdown } }
-      - { name: imagee, label: "New image thing", type: image}
-actions:
-  - name: test-deploy
-    label: "Test site deployment"
-    workflow: .
-    confirm: { title: "Test?", message: "This will trigger the build workflow.", button: "Test"}
-  - name: deploy-site
-    label: "Deploy site"
-    workflow: .
-    confirm: { title: "Deploy?", message: "This will trigger the deployment workflow.", button: "Deploy" }
+      - name: url
+        label: URL
+        type: string
+        required: true
+
+      - name: image
+        label: Image
+        type: image
+        required: true
+        options:
+          media: images
+
+      - name: text
+        label: Alt text
+        type: text
+        required: true
+
+      - name: category
+        label: Category
+        type: select
+        required: true
+        options:
+          values:
+            - name: animals
+              label: Animals
+            - name: plants
+              label: Plants
+            - name: places
+              label: Places
