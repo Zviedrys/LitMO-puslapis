@@ -3,6 +3,23 @@ media:
   output: /
 
 content:
+  - name: categories
+    label: Categories
+    type: collection
+    path: src/data/categories
+    format: yaml
+
+    fields:
+      - name: name
+        label: Name
+        type: string
+        required: true
+
+      - name: label
+        label: Label
+        type: string
+        required: true
+
   - name: items
     label: Items
     type: file
