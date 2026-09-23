@@ -45,6 +45,7 @@ content:
     type: collection
     path: src/data/items2
     format: yaml
+    filename: "{primary}.yml"
 
     fields:
       - name: url
