@@ -1,0 +1,14 @@
+- url: "https://example.com/foo"
+  image: "/images/foo.jpg"
+  text: "A description of Foo"
+  category: "animals"
+
+- url: "https://example.com/bar"
+  image: "/images/bar.jpg"
+  text: "A description of Bar"
+  category: "plants"
+
+- url: "https://example.com/baz"
+  image: "/images/baz.jpg"
+  text: "A description of Baz"
+  category: "animals"
